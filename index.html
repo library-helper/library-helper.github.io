@@ -3,19 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>My test page</title>
+    <title>Library Helper</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
-      <label for="code-input">Code: </label>
-      <textarea
-        name="code-input"
-        id="code-input"
-        rows="5"
-        cols="35"
-      ></textarea>
-      <button type="button" name="submit-button" id="submit-button">Submit</button>
-      <textarea name="code-output" id="code-output" readonly></textarea>
+      <div class="header">
+          <img id="icon" src="favicon.ico">
+          <h1>Library Helper</h1>
+      </div>
+      <div class="panels">
+          <div class="left-panel">
+              <textarea
+                name="code-input"
+                id="code-input"
+                placeholder="Code input"
+                rows="15"
+                autofocus
+                required
+              ></textarea>
+              <button
+                  type="button"
+                  name="submit-button"
+                  id="submit-button">
+                  Submit
+              </button>
+          </div>
+          <div class="right-panel">
+              <textarea
+                  name="code-output"
+                  id="code-output"
+                  readonly>
+              </textarea>
+          </div>
+      </div> 
       <script src="script.js"></script>
   </body>
 </html>

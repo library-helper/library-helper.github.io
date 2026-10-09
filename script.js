@@ -51,7 +51,12 @@ const build_blocks = (input) => {
         }
         const block = [];
         for (const line of input.split("\n")) {
-            var new_line = line.slice(0, line.lastIndexOf("ǂv")) + field + ".";
+            var new_line = line.slice(0, line.lastIndexOf("ǂv"));
+            if(field === "") {
+                new_line=new_line.trimRight();
+            } else {
+                new_line = new_line + field + ".";
+            }
             new_line = new_line.slice(0, 4) + item[1] + new_line.slice(5);
             block.push(new_line);
         }

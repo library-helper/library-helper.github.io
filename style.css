@@ -1,0 +1,47 @@
+html {
+    font-size: 16px;
+}
+
+.body {
+    align-content: space-around;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#icon {
+    height: 2rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.panels {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 10px;
+}
+
+.right-panel {
+    height: 80vh;
+    width: 60%;
+}
+
+#code-output {
+    height: 100%;
+    width: 100%;
+}
