@@ -14,6 +14,7 @@ const subfields_to_indicator = new Map(
     }),
 );
 
+const punctuation = [")", "?", "!"];
 
 const handle_error = (msg) => {
     console.log("[ERROR] " + msg);
@@ -54,6 +55,9 @@ const build_blocks = (input) => {
             var new_line = line.slice(0, line.lastIndexOf("ǂv"));
             if(field === "") {
                 new_line=new_line.trimRight();
+                if (!punctuation.includes(new_line.slice(-1))){
+                    new_line = new_line + ".";
+                }
             } else {
                 new_line = new_line + field + ".";
             }
